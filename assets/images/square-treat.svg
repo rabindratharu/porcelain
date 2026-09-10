@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" fill="none" role="img" aria-label="Placeholder illustration of a treat">
+	<rect width="900" height="900" fill="#F1DCDD"/>
+	<circle cx="450" cy="450" r="260" fill="#C98A8F"/>
+	<circle cx="450" cy="450" r="150" fill="#FBF4EC"/>
+	<circle cx="450" cy="450" r="70" fill="#8C2F3F"/>
+	<path d="M450 90a360 360 0 0 1 0 720" stroke="#BB9457" stroke-width="10" fill="none"/>
+</svg>

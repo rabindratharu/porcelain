@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Evening",
+	"description": "Lamps lit, curtains drawn — Ink becomes the ground and Cream the ink.",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "cream", "color": "#2B1A22", "name": "Ground" },
+				{ "slug": "cream-deep", "color": "#3A2530", "name": "Ground (deep)" },
+				{ "slug": "paper", "color": "#241019", "name": "Paper" },
+				{ "slug": "rose", "color": "#C98A8F", "name": "Rose" },
+				{ "slug": "rose-tint", "color": "#7A5560", "name": "Rose tint" },
+				{ "slug": "berry", "color": "#D98C7A", "name": "Berry" },
+				{ "slug": "berry-dark", "color": "#E8A594", "name": "Berry (light)" },
+				{ "slug": "sage", "color": "#9DAE8C", "name": "Sage" },
+				{ "slug": "gold", "color": "#C9A56B", "name": "Gold" },
+				{ "slug": "ink-soft", "color": "#D8C7CE", "name": "Ink (soft)" },
+				{ "slug": "ink", "color": "#FBF4EC", "name": "Ink" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|cream",
+			"text": "var:preset|color|ink"
+		},
+		"elements": {
+			"button": {
+				"color": { "background": "var:preset|color|berry", "text": "var:preset|color|paper" },
+				":hover": { "color": { "background": "var:preset|color|berry-dark", "text": "var:preset|color|paper" } },
+				":focus": { "color": { "background": "var:preset|color|berry-dark", "text": "var:preset|color|paper" } }
+			}
+		}
+	}
+}

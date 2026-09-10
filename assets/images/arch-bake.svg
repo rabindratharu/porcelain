@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1120" viewBox="0 0 900 1120" fill="none" role="img" aria-label="Placeholder illustration of a bake">
+	<rect width="900" height="1120" fill="#F1DCDD"/>
+	<path d="M450 130c176 0 320 144 320 320v560H130V450C130 274 274 130 450 130Z" fill="#C98A8F"/>
+	<circle cx="450" cy="470" r="150" fill="#BB9457"/>
+	<rect x="250" y="720" width="400" height="60" rx="30" fill="#8C2F3F"/>
+	<rect x="300" y="830" width="300" height="44" rx="22" fill="#FBF4EC" opacity="0.7"/>
+</svg>

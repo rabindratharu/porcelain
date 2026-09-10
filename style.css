@@ -1,0 +1,36 @@
+/*
+Theme Name: Porcelain
+Theme URI: https://github.com/wpwheels-org/porcelain
+Author: Rabindra Tharu
+Author URI: https://github.com/rabindratharu/
+Description: Porcelain is a warm, editorial WordPress block theme for bakeries, tea rooms, and food blogs. Arched image frames, a soft rose-and-berry palette, and a Cormorant Garamond / Work Sans pairing bring an English-tearoom warmth to every template, while full site editing keeps every section easy to customize.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.0
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: porcelain
+Tags: full-site-editing, block-patterns, blog, portfolio, news, one-column, two-columns, custom-colors, custom-menu, editor-style, featured-images, block-styles, style-variations, wide-blocks, threaded-comments, translation-ready, sticky-post
+
+Porcelain is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*
+ * Nearly all of Porcelain's styling lives in theme.json and assets/css/porcelain.css.
+ * This file carries the theme header (above) and a couple of safety nets for
+ * environments that load style.css without the block stylesheet.
+ */
+
+.wp-site-blocks {
+	overflow-x: clip;
+}
+
+.skip-link:not(:focus) {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

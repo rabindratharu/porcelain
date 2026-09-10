@@ -1,0 +1,46 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|80"},"blockGap":"var:preset|spacing|50"}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--80)">
+	<!-- wp:post-title {"level":1} /-->
+
+	<!-- wp:post-featured-image {"aspectRatio":"16/9","className":"is-style-arched"} /-->
+
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60)">
+		<!-- wp:comments -->
+		<div class="wp-block-comments">
+			<!-- wp:comments-title {"level":2,"style":{"typography":{"fontSize":"var:preset|font-size|x-large"}}} /-->
+
+			<!-- wp:comment-template -->
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.4rem","margin":{"bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--40)">
+					<!-- wp:group {"style":{"spacing":{"blockGap":"0.6rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+					<div class="wp-block-group">
+						<!-- wp:comment-author-name {"style":{"typography":{"fontWeight":"600"}}} /-->
+						<!-- wp:comment-date {"style":{"typography":{"fontSize":"var:preset|font-size|x-small"}}} /-->
+					</div>
+					<!-- /wp:group -->
+					<!-- wp:comment-content /-->
+					<!-- wp:comment-reply-link {"style":{"typography":{"fontSize":"var:preset|font-size|x-small"}}} /-->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:comment-template -->
+
+			<!-- wp:comments-pagination -->
+				<!-- wp:comments-pagination-previous /-->
+				<!-- wp:comments-pagination-numbers /-->
+				<!-- wp:comments-pagination-next /-->
+			<!-- /wp:comments-pagination -->
+
+			<!-- wp:post-comments-form /-->
+		</div>
+		<!-- /wp:comments -->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

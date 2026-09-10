@@ -104,9 +104,9 @@
 		<exclude-pattern>**/tests/**</exclude-pattern>
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="BLUSH" /><!-- Constants -->
-				<element value="Blush" /><!-- Classes -->
-				<element value="blush_" /><!-- Functions/variables -->
+				<element value="PORCELAIN" /><!-- Constants -->
+				<element value="Porcelain" /><!-- Classes -->
+				<element value="porcelain_" /><!-- Functions/variables -->
 			</property>
 		</properties>
 	</rule>
@@ -115,7 +115,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="blush" />
+				<element value="porcelain" />
 			</property>
 		</properties>
 	</rule>

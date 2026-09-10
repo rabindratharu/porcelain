@@ -59,7 +59,7 @@ module.exports = function( grunt ) {
 		// Check text domain for WordPress i18n
 		checktextdomain: {
 			options: {
-				text_domain: 'blush',
+				text_domain: 'porcelain',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',

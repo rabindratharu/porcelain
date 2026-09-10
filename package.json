@@ -1,7 +1,7 @@
 {
-	"name": "blush",
+	"name": "porcelain",
 	"version": "1.0.0",
-	"description": "A WordPress plugin with a custom post type, meta fields, shortcode, and REST API settings.",
+	"description": "Porcelain is a warm, editorial WordPress block theme for bakeries, tea rooms, and food blogs. Arched image frames, a soft rose-and-berry palette, and a serif display pairing bring an English-tearoom warmth to every template, while full site editing keeps every section easy to customize.",
 	"author": "Rabindra Tharu",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
@@ -11,10 +11,10 @@
 	"homepage": "https://www.linkedin.com/in/rabindratharu/",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/wpwheels-org/blush.git"
+		"url": "https://github.com/wpwheels-org/porcelain.git"
 	},
 	"bugs": {
-		"url": "https://github.com/wpwheels-org/blush/issues"
+		"url": "https://github.com/wpwheels-org/porcelain/issues"
 	},
 	"main": "Gruntfile.js",
 	"private": true,
@@ -72,7 +72,7 @@
 		"build:dev": "cross-env NODE_ENV=development npm-run-all 'build:!(dev|prod)'",
 		"build:js": "wp-scripts build --config ./webpack.config.js",
 		"build:prod": "npm run clean && cross-env NODE_ENV=production npm run build:js && npm run clean-maps && composer install --no-dev --optimize-autoloader --no-interaction",
-		"i18n:make-pot": "wp i18n make-pot . languages/blockfolio.pot --include=\"assets/src/**/*.js,*.php,includes/**/*.php\" --exclude=\"assets/src/library/**,builds/,node_modules/,cypress/,vendor/,tests/,build/\" --ignore-domain --allow-root",
+		"i18n:make-pot": "wp i18n make-pot . languages/porcelain.pot --include=\"assets/src/**/*.js,*.php,includes/**/*.php\" --exclude=\"assets/src/library/**,builds/,node_modules/,cypress/,vendor/,tests/,build/\" --ignore-domain --allow-root",
 		"lint:css": "wp-scripts lint-style --ignore-path=.stylelintignore",
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js:fix": "npm run lint:js -- --fix",

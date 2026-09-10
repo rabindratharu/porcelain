@@ -2,7 +2,7 @@
 /**
  * Bootstrap the PHPUnit tests.
  *
- * @package Blush 
+ * @package Porcelain 
  *
  * phpcs:disable WordPressVIPMinimum.Files.IncludingFile.UsingVariable
  */

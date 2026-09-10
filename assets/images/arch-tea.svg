@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1120" viewBox="0 0 900 1120" fill="none" role="img" aria-label="Placeholder illustration of a tea table">
+	<rect width="900" height="1120" fill="#FBF4EC"/>
+	<path d="M450 120c180 0 326 146 326 326v562H124V446C124 266 270 120 450 120Z" fill="#7E8C6E" opacity="0.35"/>
+	<circle cx="450" cy="430" r="170" fill="#C98A8F"/>
+	<path d="M620 430c0-94-76-170-170-170v340c94 0 170-76 170-170Z" fill="#8C2F3F"/>
+	<rect x="230" y="760" width="440" height="16" rx="8" fill="#BB9457"/>
+	<circle cx="330" cy="860" r="46" fill="#C98A8F"/>
+	<circle cx="470" cy="860" r="46" fill="#7E8C6E"/>
+	<circle cx="610" cy="860" r="46" fill="#BB9457"/>
+</svg>

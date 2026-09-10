@@ -1,13 +1,13 @@
 {
-	"name": "rabindratharu/blush",
-	"type": "wordpress-plugin",
-	"description": "A WordPress plugin with a custom post type, meta fields, shortcode, and REST API settings.",
+	"name": "rabindratharu/porcelain",
+	"type": "wordpress-theme",
+	"description": "Porcelain is a warm, editorial WordPress block theme for bakeries, tea rooms, and food blogs. Arched image frames, a soft rose-and-berry palette, and a serif display pairing bring an English-tearoom warmth to every template, while full site editing keeps every section easy to customize.",
 	"keywords": [
 		"wordpress",
 		"plugin"
 	],
 	"license": "GPL-2.0-or-later",
-	"homepage": "https://rabindratharu.com/blush",
+	"homepage": "https://rabindratharu.com/porcelain",
 	"authors": [
 		{
 			"name": "Rabindra Tharu",
@@ -34,7 +34,7 @@
 	"prefer-stable": true,
 	"autoload-dev": {
 		"psr-4": {
-			"Blush\\Tests\\": "tests/"
+			"Porcelain\\Tests\\": "tests/"
 		}
 	},
 	"extra": {
@@ -84,8 +84,8 @@
 		"test-multisite": "WP_MULTISITE=1 vendor/bin/phpunit --exclude-group=ms-excluded"
 	},
 	"support": {
-		"issues": "https://github.com/wpwheels-org/blush/issues",
-		"source": "https://github.com/wpwheels-org/blush",
-		"docs": "https://github.com/wpwheels-org/blush#readme"
+		"issues": "https://github.com/wpwheels-org/porcelain/issues",
+		"source": "https://github.com/wpwheels-org/porcelain",
+		"docs": "https://github.com/wpwheels-org/porcelain#readme"
 	}
 }
