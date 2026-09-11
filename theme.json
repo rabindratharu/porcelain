@@ -41,7 +41,7 @@
 				{
 					"slug": "ink-veil",
 					"name": "Ink veil",
-					"gradient": "linear-gradient(0deg, rgba(52,32,42,0.88) 0%, rgba(52,32,42,0.12) 62%, rgba(52,32,42,0) 82%)"
+					"gradient": "linear-gradient(0deg, rgba(52, 20, 28, .82) 0%, rgba(52, 20, 28, .1) 60%, transparent 80%)"
 				}
 			]
 		},

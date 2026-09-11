@@ -36,8 +36,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"verticalAlignment":"center","width":"48%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:48%">
+		<!-- wp:column {"verticalAlignment":"center","width":"48%","className":"porcelain-hero__art"} -->
+		<div class="wp-block-column is-vertically-aligned-center porcelain-hero__art" style="flex-basis:48%">
 			<!-- wp:group {"className":"porcelain-arch-duo","layout":{"type":"default"}} -->
 			<div class="wp-block-group porcelain-arch-duo">
 				<!-- wp:image {"className":"porcelain-arch-duo__main"} -->

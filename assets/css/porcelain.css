@@ -109,39 +109,39 @@
 	border-color: var(--wp--preset--color--ink);
 }
 
-@media (max-width: 781px) {
+@media (max-width: 900px) {
 	.porcelain-hero__copy h1,
 	.porcelain-hero__copy p {
 		max-width: none;
 	}
 
+	/*
+	 * Reference hero: once the columns stack, the arched image pair leads
+	 * (sits above the copy) and keeps its overlapping composition at a
+	 * shorter fixed height rather than breaking apart.
+	 */
+	.porcelain-hero__art {
+		order: -1;
+	}
+
 	.porcelain-arch-duo {
-		min-height: 0;
+		min-height: 340px;
 	}
 
-	.porcelain-arch-duo .wp-block-image {
-		position: static;
-		width: 100%;
+	.porcelain-arch-duo--mirror {
+		min-height: 300px;
+	}
+}
+
+/* Give the overlapping accent some breathing room on the narrowest screens. */
+@media (max-width: 520px) {
+	.porcelain-arch-duo {
+		min-height: 300px;
+		margin-bottom: 2rem;
 	}
 
-	.porcelain-arch-duo img {
-		height: auto;
-	}
-
-	.porcelain-arch-duo__main,
-	.porcelain-arch-duo--mirror .porcelain-arch-duo__main {
-		width: 100%;
-	}
-
-	.porcelain-arch-duo__accent,
-	.porcelain-arch-duo--mirror .porcelain-arch-duo__accent {
-		width: 62%;
-		height: auto;
-		margin: -18% 0 0 auto;
-	}
-
-	.porcelain-arch-duo--mirror .porcelain-arch-duo__accent {
-		margin-inline: 0 auto;
+	.porcelain-arch-duo__accent {
+		width: 42%;
 	}
 }
 
@@ -275,8 +275,49 @@
 }
 
 /* ------------------------------------------------------------------ *
- * Recipe card + stat row (single template / recipe patterns)
+ * Single recipe — gradient hero
+ *
+ * A full-bleed featured-image cover with the title and byline anchored
+ * to the bottom of the content column over a bottom-heavy ink gradient
+ * (theme.json can set a flat overlay colour but not this vertical fade).
  * ------------------------------------------------------------------ */
+.porcelain-post-hero.wp-block-cover {
+	min-height: clamp(420px, 56vh, 620px);
+	align-items: flex-end;
+}
+
+.porcelain-post-hero .wp-block-cover__background {
+	background-color: transparent;
+	background-image: linear-gradient(
+		0deg,
+		rgba(52, 32, 42, 0.9) 0%,
+		rgba(52, 32, 42, 0.12) 62%,
+		rgba(52, 32, 42, 0) 82%
+	);
+	opacity: 1;
+}
+
+.porcelain-post-hero h1 {
+	max-width: 16ch;
+}
+
+/* ------------------------------------------------------------------ *
+ * Recipe stat band + card (single template / recipe patterns)
+ * ------------------------------------------------------------------ */
+.porcelain-stats-band {
+	border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 35%, transparent);
+	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 35%, transparent);
+}
+
+.porcelain-stats .wp-block-column {
+	flex-grow: 1;
+	border-left: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 35%, transparent);
+}
+
+.porcelain-stats .wp-block-column:first-child {
+	border-left: 0;
+}
+
 .porcelain-recipe-card {
 	position: sticky;
 	top: 104px;
@@ -298,17 +339,57 @@
 	border-bottom: 0;
 }
 
-.porcelain-stats .wp-block-column {
-	border-left: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 35%, transparent);
+.porcelain-recipe-card ol {
+	margin: 0;
+	padding-left: 1.2rem;
 }
 
-.porcelain-stats .wp-block-column:first-child {
-	border-left: 0;
+.porcelain-recipe-card ol li {
+	padding: 0.35rem 0;
+	font-size: var(--wp--preset--font-size--small);
 }
 
-@media (max-width: 781px) {
+.porcelain-recipe-card__print {
+	margin-top: 0.4rem;
+	padding-top: 1.2rem;
+	border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 35%, transparent);
+}
+
+.porcelain-recipe-card__print a {
+	text-decoration: none;
+}
+
+@media (max-width: 900px) {
 	.porcelain-recipe-card {
 		position: static;
+	}
+
+	/* Stat band keeps a multi-up grid rather than a five-high stack. */
+	.wp-block-columns.porcelain-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.wp-block-columns.porcelain-stats > .wp-block-column {
+		flex-basis: auto !important;
+	}
+
+	.porcelain-stats .wp-block-column:nth-child(3n + 1) {
+		border-left: 0;
+	}
+}
+
+@media (max-width: 520px) {
+	.wp-block-columns.porcelain-stats {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.porcelain-stats .wp-block-column:nth-child(3n + 1) {
+		border-left: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 35%, transparent);
+	}
+
+	.porcelain-stats .wp-block-column:nth-child(odd) {
+		border-left: 0;
 	}
 }
 
@@ -397,9 +478,38 @@
 	-webkit-box-orient: vertical;
 }
 
-@media (max-width: 781px) {
-	.porcelain-recipe-feature.wp-block-cover {
-		min-height: 320px;
+/* ------------------------------------------------------------------ *
+ * Responsive — collapse to a single column at 900px
+ *
+ * The reference design uses one breakpoint at 900px rather than the
+ * WordPress default of 782px for core/columns, so every column set is
+ * pushed to stack 118px sooner. Columns that must stay side by side
+ * (the 40px avatar beside a comment) opt out with "Stack on mobile"
+ * turned off (is-not-stacked-on-mobile).
+ * ------------------------------------------------------------------ */
+@media (max-width: 900px) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile) {
+		flex-wrap: wrap !important;
+	}
+
+	.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+		flex-basis: 100% !important;
+	}
+
+	/* Category tiles keep a two-up grid instead of a single stack. */
+	.wp-block-columns.porcelain-category-tiles {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.wp-block-columns.porcelain-category-tiles > .wp-block-column {
+		flex-basis: auto !important;
+	}
+
+	/* Footer meta row centres and stacks. */
+	.porcelain-footer__legal {
+		justify-content: center;
+		text-align: center;
 	}
 }
 

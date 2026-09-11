@@ -32,8 +32,8 @@ $porcelain_tiles = [
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
-	<div class="wp-block-columns">
+	<!-- wp:columns {"className":"porcelain-category-tiles","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
+	<div class="wp-block-columns porcelain-category-tiles">
 		<?php foreach ( $porcelain_tiles as $porcelain_tile ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">

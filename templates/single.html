@@ -3,9 +3,9 @@
 <!-- wp:group {"tagName":"main","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
 
-	<!-- wp:cover {"useFeaturedImage":true,"dimRatio":60,"overlayColor":"ink","minHeight":58,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"1180px"}} -->
-	<div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--60);min-height:58vh">
-		<span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-60 has-background-dim"></span>
+	<!-- wp:cover {"useFeaturedImage":true,"dimRatio":100,"overlayColor":"ink","isUserOverlayColor":true,"minHeight":56,"minHeightUnit":"vh","contentPosition":"bottom center","align":"full","className":"porcelain-post-hero","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"1180px"}} -->
+	<div class="wp-block-cover alignfull has-custom-content-position is-position-bottom-center porcelain-post-hero" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--60);min-height:56vh">
+		<span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-100 has-background-dim"></span>
 		<div class="wp-block-cover__inner-container">
 			<!-- wp:post-terms {"term":"category","className":"porcelain-tags","textColor":"rose-tint"} /-->
 
@@ -22,22 +22,93 @@
 	</div>
 	<!-- /wp:cover -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"blockGap":"var:preset|spacing|50"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
-		<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+	<!-- wp:pattern {"slug":"porcelain/recipe-stats"} /-->
 
-		<!-- wp:separator {"className":"is-style-wide"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-		<!-- /wp:separator -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+		<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|60"}}}} -->
+		<div class="wp-block-columns">
+			<!-- wp:column {"width":"60%"} -->
+			<div class="wp-block-column" style="flex-basis:60%">
+				<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
 
-		<!-- wp:post-terms {"term":"post_tag","prefix":"Filed under: ","separator":"  ","className":"porcelain-tags"} /-->
+				<!-- wp:separator {"className":"is-style-wide"} -->
+				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<!-- /wp:separator -->
 
-		<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-		<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40)">
-			<!-- wp:post-navigation-link {"type":"previous","showTitle":true,"label":"Previous recipe","arrow":"arrow"} /-->
-			<!-- wp:post-navigation-link {"showTitle":true,"label":"Next recipe","arrow":"arrow"} /-->
+				<!-- wp:post-terms {"term":"post_tag","prefix":"Filed under: ","separator":"  ","className":"porcelain-tags"} /-->
+
+				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40)">
+					<!-- wp:post-navigation-link {"type":"previous","showTitle":true,"label":"Previous recipe","arrow":"arrow"} /-->
+					<!-- wp:post-navigation-link {"showTitle":true,"label":"Next recipe","arrow":"arrow"} /-->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"width":"34%","className":"porcelain-recipe-card"} -->
+			<div class="wp-block-column porcelain-recipe-card" style="flex-basis:34%">
+				<!-- wp:group {"backgroundColor":"paper","style":{"border":{"color":"var:preset|color|gold","width":"1px","radius":"18px"},"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group has-border-color has-paper-background-color has-background" style="border-color:var(--wp--preset--color--gold);border-width:1px;border-radius:18px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
+					<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"italic","fontWeight":"500"},"spacing":{"margin":{"bottom":"0"}}}} -->
+					<h3 class="wp-block-heading" style="margin-bottom:0;font-style:italic;font-weight:500">Make it again</h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|x-small"}},"textColor":"ink-soft"} -->
+					<p class="has-ink-soft-color has-text-color" style="font-size:var(--wp--preset--font-size--x-small)">Recipe by the kitchen</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:heading {"level":4,"fontFamily":"sans","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontWeight":"600","letterSpacing":"0.04em","textTransform":"uppercase"}},"textColor":"sage"} -->
+					<h4 class="wp-block-heading has-sage-color has-text-color has-sans-font-family" style="font-size:var(--wp--preset--font-size--x-small);font-weight:600;letter-spacing:0.04em;text-transform:uppercase">Ingredients</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:list -->
+					<ul class="wp-block-list"><!-- wp:list-item -->
+					<li>1¾ cups confectioners&#8217; sugar</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>1¼ cups almond flour</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>⅔ cup egg whites</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>3 tbsp granulated sugar</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>1–3 drops food colouring (optional)</li>
+					<!-- /wp:list-item --></ul>
+					<!-- /wp:list -->
+
+					<!-- wp:heading {"level":4,"fontFamily":"sans","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontWeight":"600","letterSpacing":"0.04em","textTransform":"uppercase"}},"textColor":"sage"} -->
+					<h4 class="wp-block-heading has-sage-color has-text-color has-sans-font-family" style="font-size:var(--wp--preset--font-size--x-small);font-weight:600;letter-spacing:0.04em;text-transform:uppercase">Directions</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:list {"ordered":true} -->
+					<ol class="wp-block-list"><!-- wp:list-item -->
+					<li>Sift the sugar and almond flour together, twice.</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>Whip the whites to stiff, glossy peaks; fold in the dry ingredients.</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>Pipe rounds, rest 30 minutes, then bake low and slow.</li>
+					<!-- /wp:list-item -->
+					<!-- wp:list-item -->
+					<li>Fill, sandwich, and chill overnight before serving.</li>
+					<!-- /wp:list-item --></ol>
+					<!-- /wp:list -->
+
+					<!-- wp:paragraph {"align":"center","className":"porcelain-recipe-card__print","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontWeight":"600","letterSpacing":"0.04em","textTransform":"uppercase"}},"textColor":"berry"} -->
+					<p class="has-text-align-center porcelain-recipe-card__print has-berry-color has-text-color" style="font-size:var(--wp--preset--font-size--x-small);font-weight:600;letter-spacing:0.04em;text-transform:uppercase"><a href="#">Print this recipe</a></p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:column -->
 		</div>
-		<!-- /wp:group -->
+		<!-- /wp:columns -->
 	</div>
 	<!-- /wp:group -->
 
@@ -50,8 +121,8 @@
 			<!-- wp:comments-title {"level":2,"style":{"typography":{"fontSize":"var:preset|font-size|x-large"}}} /-->
 
 			<!-- wp:comment-template -->
-				<!-- wp:columns -->
-				<div class="wp-block-columns">
+				<!-- wp:columns {"isStackedOnMobile":false} -->
+				<div class="wp-block-columns is-not-stacked-on-mobile">
 					<!-- wp:column {"width":"40px"} -->
 					<div class="wp-block-column" style="flex-basis:40px">
 						<!-- wp:avatar {"size":40} /-->
