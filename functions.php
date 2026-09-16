@@ -164,6 +164,13 @@ if ( ! function_exists( 'porcelain_register_block_styles' ) ) {
 				'label' => __( 'Pill tags', 'porcelain' ),
 			]
 		);
+		register_block_style(
+			'core/separator',
+			[
+				'name'  => 'circle',
+				'label' => __( 'Circle', 'porcelain' ),
+			]
+		);
 	}
 }
 add_action( 'init', 'porcelain_register_block_styles' );

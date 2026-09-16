@@ -171,6 +171,25 @@
 	border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--gold) 45%, transparent);
 }
 
+.wp-block-separator.is-style-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 10px !important;
+	height: auto;
+	border: none;
+	background: none;
+	opacity: 1;
+}
+
+.wp-block-separator.is-style-circle::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--gold);
+}
+
 /* ------------------------------------------------------------------ *
  * Sticky site header + announcement bar + nav hover underline
  * ------------------------------------------------------------------ */
@@ -190,7 +209,13 @@
 .porcelain-header .wp-block-navigation-item__content {
 	padding-bottom: 3px;
 	border-bottom: 1px solid transparent;
+	text-decoration: none;
 	transition: border-color 0.2s ease;
+}
+
+.porcelain-header .wp-block-navigation-item__content:hover,
+.porcelain-header .wp-block-navigation-item__content:focus {
+	text-decoration: none;
 }
 
 .porcelain-header .wp-block-navigation-item__content:hover,
@@ -321,6 +346,7 @@
 .porcelain-recipe-card {
 	position: sticky;
 	top: 104px;
+	align-self: flex-start;
 }
 
 .porcelain-recipe-card ul {
